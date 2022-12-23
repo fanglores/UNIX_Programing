@@ -1,0 +1,11 @@
+[Unit]
+Description = Read data from client in shared memory via polling and send via TCP
+
+[Service]
+Type = oneshot
+Restart = always
+RemainAfterExit = false
+ExecStart = /home/unix/server
+
+[Install]
+WantedBy = multi-user.target

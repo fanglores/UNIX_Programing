@@ -1,0 +1,11 @@
+[Unit]
+Description = Write data into shared memory for server
+
+[Service]
+Type = oneshot
+Restart = on-failure
+RemainAfterExit = false
+ExecStart = /home/unix/client
+
+[Install]
+WantedBy = multi-user.target
